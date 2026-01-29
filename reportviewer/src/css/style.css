@@ -1,0 +1,54 @@
+.scaleable-wrapper {
+  padding: 0px;
+  resize: both;
+  position: relative;
+  background: #efefef;
+  min-height: 300px; /* Set a minimum height */
+  min-width: 150px; /* Set a minimum width */
+  overflow: auto; /* Handle overflow */
+}
+
+#block {
+  height: 50px;
+  position: absolute; /* Use absolute positioning */
+  left: 40%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+.ui-resizable-se {
+  width: 0px;
+  height: 0px;
+  background: orange;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+pre {
+  border: 1px solid black;
+  padding: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+pre code {
+  counter-reset: line-numbering;
+}
+
+pre code .line::before {
+  content: counter(line-numbering);
+  counter-increment: line-numbering;
+  padding-right: .8em;
+  margin-right: 5px;
+  width: 1.5em;
+  text-align: right;
+  opacity: 0.5;
+  background-color: #efefef;
+}
+
+.popover-wide {
+  max-width: 750px;
+  min-width: 300px; 
+}
