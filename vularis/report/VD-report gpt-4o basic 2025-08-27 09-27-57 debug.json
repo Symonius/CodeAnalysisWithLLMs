@@ -1,0 +1,93 @@
+{
+    "report_timestamp": "27.08.2025 09:27:57",
+    "scfolder": "C:\\PATH_OMITTED",
+    "prompttype": "basic",
+    "analysis_details": {
+        "sysprompt": "Your purpose is to identify intra-file vulnerabilities in C# files. Your primary directive is to minimize false positives. Do not report a vulnerability unless the evidence is self-contained and clear within the provided code. If you are not certain, do not report it.\nYour output MUST be a single, valid JSON array. Each element in the array MUST be a JSON object representing a single vulnerability. Do not enclose the JSON in backticks or any other formatting. If no vulnerabilities are found, you MUST return an empty JSON array '[]'. Each vulnerability object MUST have the following three keys:\n1.  \"code_line\":\n    - Type: String.\n    - Content: The exact line number of the code statement that is primarily responsible for the vulnerability.\n2.  \"vulnerability_id\":\n    - Type: String.\n    - Content: A standard vulnerability identifier (e.g., \"CWE-89\") or \"\" if a standard one is not applicable.\n3.  \"vulnerability_description\":\n    - Type: String.\n    - Content: A concise, 2-4 sentence explanation of the vulnerability, why it exists, and its potential impact.\nExample of a valid response:\n[\n  {\n    \"code_line\": \"7\",\n    \"vulnerability_id\": \"CWE-89\",\n    \"vulnerability_description\": \"The application constructs SQL queries by directly embedding unsanitized user input, exposing it to SQL Injection vulnerabilities. An attacker can exploit the 'requestedUsername' parameter to inject malicious SQL code, potentially accessing unauthorized user data or compromising database integrity.\"\n  }\n]",
+        "userprompt": "Analyze the following C# code for security vulnerabilities:\n",
+        "model": "gpt-4o",
+        "config": {
+            "temperature": 0
+        }
+    },
+    "vulnerabilities_found": [
+        {
+            "raw": {
+                "endpoint": "ENDPOINT_OMITTED",
+                "headers": {
+                    "Content-type": "application/json",
+                    "api-key": "APIKEY_OMITTED"
+                },
+                "body": {
+                    "messages": [
+                        {
+                            "role": "system",
+                            "content": "Your purpose is to identify intra-file vulnerabilities in C# files. Your primary directive is to minimize false positives. Do not report a vulnerability unless the evidence is self-contained and clear within the provided code. If you are not certain, do not report it.\nYour output MUST be a single, valid JSON array. Each element in the array MUST be a JSON object representing a single vulnerability. Do not enclose the JSON in backticks or any other formatting. If no vulnerabilities are found, you MUST return an empty JSON array '[]'. Each vulnerability object MUST have the following three keys:\n1.  \"code_line\":\n    - Type: String.\n    - Content: The exact line number of the code statement that is primarily responsible for the vulnerability.\n2.  \"vulnerability_id\":\n    - Type: String.\n    - Content: A standard vulnerability identifier (e.g., \"CWE-89\") or \"\" if a standard one is not applicable.\n3.  \"vulnerability_description\":\n    - Type: String.\n    - Content: A concise, 2-4 sentence explanation of the vulnerability, why it exists, and its potential impact.\nExample of a valid response:\n[\n  {\n    \"code_line\": \"7\",\n    \"vulnerability_id\": \"CWE-89\",\n    \"vulnerability_description\": \"The application constructs SQL queries by directly embedding unsanitized user input, exposing it to SQL Injection vulnerabilities. An attacker can exploit the 'requestedUsername' parameter to inject malicious SQL code, potentially accessing unauthorized user data or compromising database integrity.\"\n  }\n]"
+                        },
+                        {
+                            "role": "user",
+                            "content": "Analyze the following C# code for security vulnerabilities:\nFile: FILENAME_OMITTED.cs\n1: FILECONTENT_OMITTED"
+                        }
+                    ],
+                    "temperature": 0
+                }
+            },
+            "response_code_api_query": 200,
+            "filename": "FILENAME_OMITTED.cs",
+            "file_content": "FILECONTENT_OMITTED",
+            "vulnerabilities": []
+        },
+        {
+            "raw": {
+                "endpoint": "ENDPOINT_OMITTED",
+                "headers": {
+                    "Content-type": "application/json",
+                    "api-key": "APIKEY_OMITTED"
+                },
+                "body": {
+                    "messages": [
+                        {
+                            "role": "system",
+                            "content": "Your purpose is to identify intra-file vulnerabilities in C# files. Your primary directive is to minimize false positives. Do not report a vulnerability unless the evidence is self-contained and clear within the provided code. If you are not certain, do not report it.\nYour output MUST be a single, valid JSON array. Each element in the array MUST be a JSON object representing a single vulnerability. Do not enclose the JSON in backticks or any other formatting. If no vulnerabilities are found, you MUST return an empty JSON array '[]'. Each vulnerability object MUST have the following three keys:\n1.  \"code_line\":\n    - Type: String.\n    - Content: The exact line number of the code statement that is primarily responsible for the vulnerability.\n2.  \"vulnerability_id\":\n    - Type: String.\n    - Content: A standard vulnerability identifier (e.g., \"CWE-89\") or \"\" if a standard one is not applicable.\n3.  \"vulnerability_description\":\n    - Type: String.\n    - Content: A concise, 2-4 sentence explanation of the vulnerability, why it exists, and its potential impact.\nExample of a valid response:\n[\n  {\n    \"code_line\": \"7\",\n    \"vulnerability_id\": \"CWE-89\",\n    \"vulnerability_description\": \"The application constructs SQL queries by directly embedding unsanitized user input, exposing it to SQL Injection vulnerabilities. An attacker can exploit the 'requestedUsername' parameter to inject malicious SQL code, potentially accessing unauthorized user data or compromising database integrity.\"\n  }\n]"
+                        },
+                        {
+                            "role": "user",
+                            "content": "Analyze the following C# code for security vulnerabilities:\nFile: FILENAME_OMITTED.cs\n1: FILECONTENT_OMITTED"
+                        }
+                    ],
+                    "temperature": 0
+                }
+            },
+            "response_code_api_query": 200,
+            "filename": "FILENAME_OMITTED.cs",
+            "file_content": "FILECONTENT_OMITTED",
+            "vulnerabilities": []
+        },
+        {
+            "raw": {
+                "endpoint": "ENDPOINT_OMITTED",
+                "headers": {
+                    "Content-type": "application/json",
+                    "api-key": "APIKEY_OMITTED"
+                },
+                "body": {
+                    "messages": [
+                        {
+                            "role": "system",
+                            "content": "Your purpose is to identify intra-file vulnerabilities in C# files. Your primary directive is to minimize false positives. Do not report a vulnerability unless the evidence is self-contained and clear within the provided code. If you are not certain, do not report it.\nYour output MUST be a single, valid JSON array. Each element in the array MUST be a JSON object representing a single vulnerability. Do not enclose the JSON in backticks or any other formatting. If no vulnerabilities are found, you MUST return an empty JSON array '[]'. Each vulnerability object MUST have the following three keys:\n1.  \"code_line\":\n    - Type: String.\n    - Content: The exact line number of the code statement that is primarily responsible for the vulnerability.\n2.  \"vulnerability_id\":\n    - Type: String.\n    - Content: A standard vulnerability identifier (e.g., \"CWE-89\") or \"\" if a standard one is not applicable.\n3.  \"vulnerability_description\":\n    - Type: String.\n    - Content: A concise, 2-4 sentence explanation of the vulnerability, why it exists, and its potential impact.\nExample of a valid response:\n[\n  {\n    \"code_line\": \"7\",\n    \"vulnerability_id\": \"CWE-89\",\n    \"vulnerability_description\": \"The application constructs SQL queries by directly embedding unsanitized user input, exposing it to SQL Injection vulnerabilities. An attacker can exploit the 'requestedUsername' parameter to inject malicious SQL code, potentially accessing unauthorized user data or compromising database integrity.\"\n  }\n]"
+                        },
+                        {
+                            "role": "user",
+                            "content": "Analyze the following C# code for security vulnerabilities:\nFile: File: FILENAME_OMITTED.cs\n1: FILECONTENT_OMITTED"
+                        }
+                    ],
+                    "temperature": 0
+                }
+            },
+            "response_code_api_query": 200,
+            "filename": "FILENAME_OMITTED.cs",
+            "file_content": "FILECONTENT_OMITTED",
+            "vulnerabilities": []
+        }
+    ]
+}
