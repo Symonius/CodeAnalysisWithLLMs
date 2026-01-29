@@ -78,7 +78,7 @@
                         },
                         {
                             "role": "user",
-                            "content": "Analyze the following C# code for security vulnerabilities:\nFile: File: FILENAME_OMITTED.cs\n1: FILECONTENT_OMITTED"
+                            "content": "Analyze the following C# code for security vulnerabilities:\nFile: FILENAME_OMITTED.cs\n1: FILECONTENT_OMITTED"
                         }
                     ],
                     "temperature": 0
@@ -90,4 +90,5 @@
             "vulnerabilities": []
         }
     ]
+
 }
